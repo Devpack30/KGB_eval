@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 179, 86);
+  height: auto;
+  width: auto;
+  margin: 0 20% 0 20%;
+  display: grid;
+  grid-template-rows: 15% 1fr 15%;
+}
+
+button {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  height: 50px;
+  width: 120px;
+  margin-right: 100px;
+}
+
+h1 {
+  color: rgb(214, 33, 33);
+  font-size: 4em;
+  text-align: center;
+  margin-top: 50px;
+}
+
+img {
+  height: 750px;
+  width: 100%;
+}
+
+.flag {
+  position: absolute;
+  top: 60px;
+  left: 40px;
+  height: 50px;
+  width: 90px;
+  margin-left: 100px;
+}
+
+footer {
+  margin-top: 50px;
+}
