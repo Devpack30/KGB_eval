@@ -8,7 +8,7 @@ include "html\Footer.html";
 session_start();
 $bdd = new pdo('mysql:host=localhost;dbname=kgb_eval', 'root', '',);
 
-//-------------------------------- Formulaire de saisie + alerte de saisie non valide (JavaScript) ----------------------------------
+//-------------------------------- Fonction bouton envoi formulaire de saisie + alerte de saisie non valide (JavaScript) ----------------------------------
 if (isset($_POST['envoi'])) {
     if (!empty($_POST['pseudo']) and !empty($_POST['mdp'])) {
         $pseudo = htmlspecialchars($_POST['pseudo']);
@@ -18,11 +18,13 @@ if (isset($_POST['envoi'])) {
         $recupUser->execute(array($pseudo, $mdp));
 
         if ($recupUser->rowCount() > 0) {
-            $_SESSION['pseudo'] = $pseudo;
-            $_SESSION['mdp'] = $mdp;
-            $_SESSION['id'] = $recupUser->fetch()['pseudo'];
         } else {
-            echo " <script> alert('Attention vous êtes sur un site officiel de la Fédération de RUSSIE '); window.location='index.php'</script>";
+            echo "Erreur";
         }
+        $_SESSION['pseudo'] = $pseudo;
+        $_SESSION['mdp'] = $mdp;
+        $_SESSION['id'] = $recupUser->fetch()['id'];
+    } else {
+        echo " <script> alert('Attention vous êtes sur un site officiel de la Fédération de RUSSIE !!! '); window.location='index.php'</script>";
     }
 }
