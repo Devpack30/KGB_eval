@@ -52,13 +52,13 @@ if (isset($_POST['envoi'])) {
 }
 
 //  Récupération liste agent
-$sql = "SELECT * FROM `agent`";
+// $sql = "SELECT * FROM `agent`";
 
-// Executer en direct
-$recup = $db->query($sql);
+// // Executer en direct
+// $recup = $db->query($sql);
 
-// Récuperation des données
-$user = $recup->fetchAll();
-echo "<pre>";
-var_dump($user);
-echo "</pre>";
+// // Récuperation des données
+// $user = $recup->fetchAll();
+// echo "<pre>";
+// var_dump($user);
+// echo "</pre>";

@@ -10,8 +10,8 @@
 </head>
 <header>
   <h1>Union of Federation of Russia</h1>
+  <img class="flag" src="img\flag.png" alt="russe flag" />
 </header>
-<img class="flag" src="img\flag.png" alt="russe flag" />
 <div class="connect">
   <form method="POST" action="">
     <input type="text" name="pseudo" autocomplete="off" />
